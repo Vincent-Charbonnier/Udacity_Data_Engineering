@@ -56,13 +56,6 @@ https://drawsql.app/hpe-1/diagrams/song-play-analysis
 5. time - timestamps of records in songplays broken down into specific units
   • start_time, hour, day, week, month, year, weekday
   
-## Running the Python Scripts
-At the terminal:
-```
-python create_tables.py
-python etl.py
-```
-
 ## Project Template
 To get started with the project, go to the workspace on the next page, where you'll find the project template files. You can work on your project and submit your work through this workspace. 
 Alternatively, you can download the project template files from the Resources folder if you'd like to develop your project locally.

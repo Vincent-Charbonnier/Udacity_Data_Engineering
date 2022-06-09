@@ -28,7 +28,8 @@ log_data/2018/11/2018-11-12-events.json
 log_data/2018/11/2018-11-13-events.json
 ```
 And below is an example of what the data in a log file, 2018-11-12-events.json, looks like.
-**IMAGE HERE**
+
+![image](https://user-images.githubusercontent.com/70199241/172784478-a2c568d5-640e-48a2-911e-d0fc41c2b517.png)
 
 If you would like to look at the JSON data within log_data files, you will need to create a pandas dataframe to read the data. Remember to first import JSON and pandas libraries.
 ```
@@ -50,6 +51,7 @@ Using the song and log datasets, you'll need to create a star schema optimized f
   • artist_id, name, location, latitude, longitude
 5. time - timestamps of records in songplays broken down into specific units
   • start_time, hour, day, week, month, year, weekday
+  
 ![image](https://user-images.githubusercontent.com/70199241/172784179-f0e2cd97-29e9-4f27-bbf4-5a55c2ae2ee1.png)
 
 ## Project Template

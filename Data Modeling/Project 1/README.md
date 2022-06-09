@@ -39,6 +39,9 @@ For example, df = pd.read_json('data/log_data/2018/11/2018-11-01-events.json', l
 
 ## Schema for Song Play Analysis
 Using the song and log datasets, you'll need to create a star schema optimized for queries on song play analysis. This includes the following tables.
+
+![image](https://user-images.githubusercontent.com/70199241/172784179-f0e2cd97-29e9-4f27-bbf4-5a55c2ae2ee1.png)
+
 ### Fact Table
 1. songplays - records in log data associated with song plays i.e. records with page NextSong
   • songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent
@@ -52,8 +55,6 @@ Using the song and log datasets, you'll need to create a star schema optimized f
 5. time - timestamps of records in songplays broken down into specific units
   • start_time, hour, day, week, month, year, weekday
   
-![image](https://user-images.githubusercontent.com/70199241/172784179-f0e2cd97-29e9-4f27-bbf4-5a55c2ae2ee1.png)
-
 ## Project Template
 To get started with the project, go to the workspace on the next page, where you'll find the project template files. You can work on your project and submit your work through this workspace. 
 Alternatively, you can download the project template files from the Resources folder if you'd like to develop your project locally.

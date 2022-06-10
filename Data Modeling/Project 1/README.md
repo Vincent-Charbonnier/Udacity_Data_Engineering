@@ -54,16 +54,13 @@ https://drawsql.app/hpe-1/diagrams/song-play-analysis
 ### Dimension Tables
 2. users - users in the app
 
-    • user_id, first_name, last_name, gender, level
-    
+    • user_id, first_name, last_name, gender, level    
 3. songs - songs in music database
 
-    • song_id, title, artist_id, year, duration
-    
+    • song_id, title, artist_id, year, duration    
 4. artists - artists in music database
 
-    • artist_id, name, location, latitude, longitude
-    
+    • artist_id, name, location, latitude, longitude  
 5. time - timestamps of records in songplays broken down into specific units
 
     • start_time, hour, day, week, month, year, weekday

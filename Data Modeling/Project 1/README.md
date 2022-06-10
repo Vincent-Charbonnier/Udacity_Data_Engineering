@@ -73,11 +73,11 @@ In addition to the data files, the project workspace includes six files:
 ## Try the project
 To try the project, open a terminal and run the following:
 
-``` python create_tables.py``` *to create your database and tables.*
+1. ``` python create_tables.py``` *to create your database and tables.*
 
-``` python etl.py``` *to develop ETL processes for each table*
+2. ``` python etl.py``` *to develop ETL processes for each table*
 
-``` python test.py``` *to verify if the database is correctly set*
+3. ``` python test.py``` *to verify if the database is correctly set*
 
 **[WARNING] Remember to run create_tables.py before running etl.py to reset your tables.**
 

@@ -74,3 +74,17 @@ song_select = ("SELECT songs.song_id, artists.artist_id FROM songs JOIN artists 
 
 create_table_queries = [songplay_table_create, user_table_create, song_table_create, artist_table_create, time_table_create]
 drop_table_queries = [songplay_table_drop, user_table_drop, song_table_drop, artist_table_drop, time_table_drop]
+
+# Test results
+
+songplays_where = ("SELECT * FROM songplays WHERE song_id IS NOT NULL")
+songplays_head = ("SELECT * FROM songplays LIMIT 5;")
+songplays_count = ("SELECT count(*) FROM songplays*")
+users_head = ("SELECT * FROM users LIMIT 5;")
+users_count = ("SELECT count(*) FROM users")
+songs_head = ("SELECT * FROM songs LIMIT 5;")
+songs_count = ("SELECT count(*) FROM songs")
+artists_head = ("SELECT * FROM artists LIMIT 5;")
+artists_count = ("SELECT count(*) FROM artists")
+time_head = ("SELECT * FROM time LIMIT 5;")
+time_count = ("SELECT count(*) FROM time")

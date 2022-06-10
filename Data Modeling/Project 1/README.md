@@ -35,7 +35,7 @@ If you would like to look at the JSON data within log_data files, you will need 
 ```
 df = pd.read_json(filepath, lines=True)
 ```
-For example, ```df = pd.read_json('data/log_data/2018/11/2018-11-01-events.json', lines=True)``` would read the data file 2018-11-01-events.json.
+For example, ```df = pd.read_json('data/log_data/2018/11/2018-11-01-events.json', lines=True)``` would read the data file ```2018-11-01-events.json```.
 
 ## Schema for Song Play Analysis
 Using the song and log datasets, you'll need to create a star schema optimized for queries on song play analysis. This includes the following tables.

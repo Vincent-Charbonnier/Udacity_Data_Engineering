@@ -79,5 +79,5 @@ To try the project, open a terminal and run the following:
 
 ``` python test.py``` *to verify if the database is correctly set*
 
-**Remember to run create_tables.py before running etl.py to reset your tables.**
+**[WARNING] Remember to run create_tables.py before running etl.py to reset your tables.**
 

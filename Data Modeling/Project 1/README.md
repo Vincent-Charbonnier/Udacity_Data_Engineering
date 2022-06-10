@@ -7,7 +7,7 @@ They'd like a data engineer to create a Postgres database with tables designed t
 
 ## Project Description
 In this project, you'll apply what you've learned on data modeling with Postgres and build an ETL pipeline using Python. To complete the project, you will need to define fact and dimension tables for a star schema for a particular analytic focus, and write an ETL pipeline that transfers data from files in two local directories into these tables in Postgres using Python and SQL.
-
+  
 ## Song Dataset
 The first dataset is a subset of real data from the Million Song Dataset. Each file is in JSON format and contains metadata about a song and the artist of that song. The files are partitioned by the first three letters of each song's track ID. For example, here are file paths to two files in this dataset.
 ```
@@ -57,17 +57,15 @@ https://drawsql.app/hpe-1/diagrams/song-play-analysis
   • artist_id, name, location, latitude, longitude
 5. time - timestamps of records in songplays broken down into specific units
   • start_time, hour, day, week, month, year, weekday
-  
+
 ## Project Template
-To get started with the project, go to the workspace on the next page, where you'll find the project template files. You can work on your project and submit your work through this workspace. 
-Alternatively, you can download the project template files from the Resources folder if you'd like to develop your project locally.
 In addition to the data files, the project workspace includes six files:
-1. test.ipynb displays the first few rows of each table to let you check your database.
-2. create_tables.py drops and creates your tables. You run this file to reset your tables before each time you run your ETL scripts.
-3. etl.ipynb reads and processes a single file from song_data and log_data and loads the data into your tables. This notebook contains detailed instructions on the ETL process for each of the tables.
-4. etl.py reads and processes files from song_data and log_data and loads them into your tables. You can fill this out based on your work in the ETL notebook.
-5. sql_queries.py contains all your sql queries, and is imported into the last three files above.
-6. README.md provides discussion on your project.
+1. test.ipynb displays the first few rows of each table to let you check the database.
+2. create_tables.py drops and creates the tables. You must run this file to reset the tables before each time you run the ETL scripts.
+3. etl.ipynb reads and processes a single file from song_data and log_data and loads the data into the tables. This notebook contains detailed instructions on the ETL process for each of the tables.
+4. etl.py reads and processes files from song_data and log_data and loads them into your tables. This file has been created based on the ETL notebook.
+5. sql_queries.py contains all the sql queries, and is imported into the last three files above.
+6. README.md provides the project's description.
 
 ## Try the project
 To try the project, open a terminal and run the following:

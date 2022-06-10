@@ -61,7 +61,7 @@ https://drawsql.app/hpe-1/diagrams/song-play-analysis
   • start_time, hour, day, week, month, year, weekday
 
 ## Project Template
-In addition to the data files, the project workspace includes six files:
+In addition to the data files, the project workspace includes 7 files:
 1. create_tables.py drops and creates the tables. You must run this file to reset the tables before each time you run the ETL scripts.
 2. etl.ipynb reads and processes a single file from song_data and log_data and loads the data into the tables. This notebook contains detailed instructions on the ETL process for each of the tables.
 3. etl.py reads and processes files from song_data and log_data and loads them into your tables. This file has been created based on the ETL notebook.

@@ -35,31 +35,39 @@ If you would like to look at the JSON data within log_data files, you will need 
 ```
 df = pd.read_json(filepath, lines=True)
 ```
-For example, df = pd.read_json('data/log_data/2018/11/2018-11-01-events.json', lines=True) would read the data file 2018-11-01-events.json.
+For example, ```df = pd.read_json('data/log_data/2018/11/2018-11-01-events.json', lines=True)``` would read the data file ```2018-11-01-events.json```.
 
 ## Schema for Song Play Analysis
 Using the song and log datasets, you'll need to create a star schema optimized for queries on song play analysis. This includes the following tables.
 
 ![image](https://user-images.githubusercontent.com/70199241/173021524-f640fc75-532f-4b47-a263-7d6a15c5a084.png)
+
 https://drawsql.app/hpe-1/diagrams/song-play-analysis
 
 ### Fact Table
 1. songplays - records in log data associated with song plays i.e. records with page NextSong
-  • songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent
+ 
+    • songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent
+
 **[WARNING] The songplays table does not have a primary key!**  
 
 ### Dimension Tables
 2. users - users in the app
-  • user_id, first_name, last_name, gender, level
+
+    • user_id, first_name, last_name, gender, level    
 3. songs - songs in music database
-  • song_id, title, artist_id, year, duration
+
+    • song_id, title, artist_id, year, duration    
 4. artists - artists in music database
-  • artist_id, name, location, latitude, longitude
+
+    • artist_id, name, location, latitude, longitude  
 5. time - timestamps of records in songplays broken down into specific units
-  • start_time, hour, day, week, month, year, weekday
+
+    • start_time, hour, day, week, month, year, weekday
+    
 
 ## Project Template
-In addition to the data files, the project workspace includes six files:
+In addition to the data files, the project repository includes 7 files:
 1. create_tables.py drops and creates the tables. You must run this file to reset the tables before each time you run the ETL scripts.
 2. etl.ipynb reads and processes a single file from song_data and log_data and loads the data into the tables. This notebook contains detailed instructions on the ETL process for each of the tables.
 3. etl.py reads and processes files from song_data and log_data and loads them into your tables. This file has been created based on the ETL notebook.
@@ -71,11 +79,11 @@ In addition to the data files, the project workspace includes six files:
 ## Try the project
 To try the project, open a terminal and run the following:
 
-``` python create_tables.py``` *to create your database and tables.*
+1. ``` python create_tables.py``` *to create your database and tables.*
 
-``` python etl.py``` *to develop ETL processes for each table*
+2. ``` python etl.py``` *to develop ETL processes for each table*
 
-``` python test.py``` *to verify if the database is correctly set*
+3. ``` python test.py``` *to verify if the database is correctly set*
 
-**Remember to run create_tables.py before running etl.py to reset your tables.**
+**[WARNING] Remember to run create_tables.py before running etl.py to reset your tables.**
 

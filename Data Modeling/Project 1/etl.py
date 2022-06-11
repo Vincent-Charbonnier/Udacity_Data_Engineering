@@ -6,6 +6,16 @@ from sql_queries import *
 
 
 def process_song_file(cur, filepath):
+    """
+    This procedure processes a song file whose filepath has been provided as an arugment.
+    It extracts the song information in order to store it into the songs table.
+    Then it extracts the artist information in order to store it into the artists table.
+
+    INPUTS: 
+    * cur the cursor variable
+    * filepath the file path to the song file
+    """
+    
     # open song file
     df = pd.read_json(filepath, lines=True)
 
@@ -31,6 +41,17 @@ def process_song_file(cur, filepath):
 
 
 def process_log_file(cur, filepath):
+    """
+    This procedure processes a log file whose filepath has been provided as an arugment.
+    It extracts the time information in order to store it into the time table.
+    Then it extracts the user information in order to store it into the users table.
+    Finally it extracts joins what we extracted before in order to store it into the songplays table.
+
+    INPUTS: 
+    * cur the cursor variable
+    * filepath the file path to the log file
+    """
+    
     # open log file
     df = pd.read_json(filepath, lines=True)
 
@@ -96,6 +117,16 @@ def process_log_file(cur, filepath):
 
             
 def process_data(cur, conn, filepath, func):
+    """
+    This procedure processes a data (JSON) file whose filepath has been provided as an arugment.
+
+    INPUTS: 
+    * cur the cursor variable
+    * conn the connection variable
+    * filepath the file path to the data file
+    * func the function to call for each found file
+    """
+    
     # get all files matching extension from directory
     all_files = []
     for root, dirs, files in os.walk(filepath):
@@ -115,6 +146,14 @@ def process_data(cur, conn, filepath, func):
 
         
 def main():
+    """
+    This is the main script execution.
+    
+    First, it creates a database connection.
+    Then, it processes both Song and Log information.
+    Finally, it closes the cursor and database connection.
+    """
+    
     # Adding error logging
     try:
         conn = psycopg2.connect("host=127.0.0.1 dbname=sparkifydb user=student password=student")

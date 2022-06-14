@@ -28,17 +28,17 @@ In addition to the data files, the project repository includes 7 files:
 3. event_datafile_new.csv: Dataset that results of the processed fata from the above Jupyter Notebook.
 
 The event_datafile_new.csv contains the following columns:
-	- artist
-	- first name of user
-	- gender of user
-	- item number in session
-	- last name of user
-	- length of the song
-	- level (paid or free song)
-	- location of the user
-	- sessionId
-	- song title
-	- userId
+1. artist,
+2. first name of user,
+3. gender of user,
+4. item number in session,
+5. last name of user
+6. length of the song
+7. level (paid or free song)
+8. location of the user
+9. session id
+10. song title
+11. user id
 	
 The image below is a screenshot of what the denormalized data should appear like in the event_datafile_new.csv after the code above is run:
 ![image](https://github.com/Vincent-Charbonnier/Udacity_Data_Engineering/raw/af9b536f66622b1048fe0e176026ad54a408d30e/Data%20Modeling/Project%202%20-%20Data%20Modeling%20with%20Apache%20Cassandra/images/image_event_datafile_new.jpg)

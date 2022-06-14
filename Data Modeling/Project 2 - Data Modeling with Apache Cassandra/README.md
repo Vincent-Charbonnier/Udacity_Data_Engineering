@@ -23,23 +23,22 @@ In addition to the data files, the project repository includes 7 files:
 	- you will model the data tables keeping in mind the queries you need to run
 	- you have been provided queries that you will need to model your data tables for
 	- you will load the data into tables you create in Apache Cassandra and run your queries
-1. Project_1B_ Project_Template.ipynb reads and processes a single file from song_data and log_data and loads the data into the tables. This notebook contains detailed 
-2. event_datafile_new.csv
-3. README.md provides the project's description.
+1. Project_1B_ Project_Template.ipynb: process the event_datafile_new.csv dataset to create a denormalized dataset, model the data tables, load the data into tables and run required queries
+2. README.md: provides the project's description.
+3. event_datafile_new.csv: Dataset that results of the processed fata from the above Jupyter Notebook.
 
-Part II. Complete the Apache Cassandra coding portion of your project.
-Now you are ready to work with the CSV file titled event_datafile_new.csv, located within the Workspace directory. The event_datafile_new.csv contains the following columns:
-	• artist 
-	• firstName of user
-	• gender of user
-	• item number in session
-	• last name of user
-	• length of the song
-	• level (paid or free song)
-	• location of the user
-	• sessionId
-	• song title
-	• userId
+The event_datafile_new.csv contains the following columns:
+	- artist 
+	- firstName of user
+	- gender of user
+	- item number in session
+	- last name of user
+	- length of the song
+	- level (paid or free song)
+	- location of the user
+	- sessionId
+	- song title
+	- userId
 	
 The image below is a screenshot of what the denormalized data should appear like in the event_datafile_new.csv after the code above is run:
 ![image](https://github.com/Vincent-Charbonnier/Udacity_Data_Engineering/raw/af9b536f66622b1048fe0e176026ad54a408d30e/Data%20Modeling/Project%202%20-%20Data%20Modeling%20with%20Apache%20Cassandra/images/image_event_datafile_new.jpg)

@@ -29,27 +29,16 @@ In addition to the data files, the project repository includes 7 files:
 
 The event_datafile_new.csv contains the following columns:
 	- artist
-	
-	- firstName of user
-	
+	- first name of user
 	- gender of user
-	
 	- item number in session
-	
 	- last name of user
-	
 	- length of the song
-	
 	- level (paid or free song)
-	
 	- location of the user
-	
 	- sessionId
-	
 	- song title
-	
 	- userId
-	
 	
 The image below is a screenshot of what the denormalized data should appear like in the event_datafile_new.csv after the code above is run:
 ![image](https://github.com/Vincent-Charbonnier/Udacity_Data_Engineering/raw/af9b536f66622b1048fe0e176026ad54a408d30e/Data%20Modeling/Project%202%20-%20Data%20Modeling%20with%20Apache%20Cassandra/images/image_event_datafile_new.jpg)

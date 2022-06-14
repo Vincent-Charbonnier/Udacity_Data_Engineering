@@ -5,13 +5,10 @@ A startup called Sparkify wants to analyze the data they've been collecting on s
 The analysis team is particularly interested in understanding what songs users are listening to. 
 Currently, there is no easy way to query the data to generate the results, since the data reside in a directory of CSV files on user activity on the app.
 They'd like a data engineer to create an Apache Cassandra database which can create queries on song play data to answer the questions, and wish to bring you on the project. 
-Your role is to create a database for this analysis. 
-You'll be able to test your database by running queries given to you by the analytics team from Sparkify to create the results.
-
-## Project Overview
-In this project, you'll apply what you've learned on data modeling with Apache Cassandra and complete an ETL pipeline using Python. 
-To complete the project, you will need to model your data by creating tables in Apache Cassandra to run queries. You are provided with part of the ETL pipeline that transfers data from a set of CSV files within a directory to create a streamlined CSV file to model and insert data into Apache Cassandra tables. 
-We have provided you with a project template that takes care of all the imports and provides a structure for ETL pipeline you'd need to process this data.
+The Jupiter Notebooks will be used to create a database for this analysis and to test the database by running the following queries given by the analytics team from Sparkify to create the results:
+1. Give me the artist, song title and song's length in the music app history that was heard during sessionId = 338, and itemInSession = 4
+2. Give me only the following: name of artist, song (sorted by itemInSession) and user (first and last name) for userid = 10, sessionid = 182
+3. Give me every user name (first and last) in my music app history who listened to the song 'All Hands Against His Own'
 
 ## Datasets
 For this project, you'll be working with one dataset: event_data. The directory of CSV files partitioned by date. Here are examples of filepaths to two files in the dataset:
@@ -21,11 +18,14 @@ event_data/2018-11-09-events.csv
 ```
 
 ## Project Template
-The project template includes one Jupyter Notebook file, in which:
-	• you will process the ```event_datafile_new.csv``` dataset to create a denormalized dataset
-	• you will model the data tables keeping in mind the queries you need to run
-	• you have been provided queries that you will need to model your data tables for
-	• you will load the data into tables you create in Apache Cassandra and run your queries
+In addition to the data files, the project repository includes 7 files:
+	- you will process the ```event_datafile_new.csv``` dataset to create a denormalized dataset
+	- you will model the data tables keeping in mind the queries you need to run
+	- you have been provided queries that you will need to model your data tables for
+	- you will load the data into tables you create in Apache Cassandra and run your queries
+1. Project_1B_ Project_Template.ipynb reads and processes a single file from song_data and log_data and loads the data into the tables. This notebook contains detailed 
+2. event_datafile_new.csv
+3. README.md provides the project's description.
 
 Part II. Complete the Apache Cassandra coding portion of your project.
 Now you are ready to work with the CSV file titled event_datafile_new.csv, located within the Workspace directory. The event_datafile_new.csv contains the following columns:

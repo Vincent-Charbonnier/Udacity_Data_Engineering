@@ -68,7 +68,7 @@ In addition to the data files, the project repository includes 7 files:
 4. test.ipynb *displays the first few rows of each table to let you check the database.
 5. test.py *displays the first few rows of each table to let you check the database.
 6. sql_queries.py *contains all the sql queries, and is imported into the last three files above.
-7. README.md *provides the project's description.
+7. README.md **provides the project's description.
 
 ## Try the project
 To try the project, open a terminal and run the following:

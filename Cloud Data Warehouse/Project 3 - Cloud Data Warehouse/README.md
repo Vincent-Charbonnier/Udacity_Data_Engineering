@@ -69,27 +69,16 @@ In addition to the data files, the project repository includes 7 files:
 5. ```README.md``` provides the project's description including choices regarding process and decisions for this ETL pipeline.
 6. ```etl.ipynb```: End-to-end project including AWS Redshift cluster creation, IAM role definition, dwh.cfg update, table creation, data load ans cluster deletion.
 
+## Project prerequisistes
+1. Import all the necessary libraries
+2. Update the configuration of AWS Cluster ```dwh.cfg``` with your personal account details
+3. Create clients for IAM, EC2, S3 and Redshift using boto3
+4. Create an IAM User Role, Assign appropriate permissions and create the Redshift Cluster
+5. Authorize Security Access Group to Default TCP/IP Address
+
 ## Try the project
 To try the project, please follow the following instructions:
-
-1. ``` python create_tables.py``` *to create your database and tables.*
-
+1. ``` python create_tables.py``` *to create your database and tables - takes about 5 minutes*
 2. ``` python etl.py``` *to develop ETL processes for each table*
 
-**[WARNING] Remember to run create_tables.py before running etl.py to reset your tables.**
-
-Final Instructions
-
-    Import all the necessary libraries
-    Write the configuration of AWS Cluster, store the important parameter in some other file
-    Configuration of boto3 which is an AWS SDK for Python
-    Using the bucket, can check whether files log files and song data files are present
-    Create an IAM User Role, Assign appropriate permissions and create the Redshift Cluster
-    Get the Value of Endpoint and Role for put into main configuration file
-    Authorize Security Access Group to Default TCP/IP Address
-    Launch database connectivity configuration
-    Go to Terminal write the command "python create_tables.py" and then "etl.py"
-    Should take around 4-10 minutes in total
-    Then you go back to jupyter notebook to test everything is working fine
-    I counted all the records in my tables
-    Now can delete the cluster, roles and assigned permission
+Once it is over, do not forget to **delete the cluster, roles and assigned permission

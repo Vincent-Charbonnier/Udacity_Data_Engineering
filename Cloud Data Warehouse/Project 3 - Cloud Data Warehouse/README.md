@@ -81,4 +81,4 @@ To try the project, please follow the following instructions:
 1. ``` python create_tables.py``` *to create your database and tables - takes about 5 minutes*
 2. ``` python etl.py``` *to develop ETL processes for each table*
 
-Once it is over, do not forget to **delete the cluster, roles and assigned permission
+Once it is over, do not forget to **delete the cluster, roles and assigned permission**

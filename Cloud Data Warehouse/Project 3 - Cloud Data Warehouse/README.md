@@ -40,7 +40,7 @@ For example, ```df = pd.read_json('data/log_data/2018/11/2018-11-01-events.json'
 ## Schema for Song Play Analysis
 Using the song and log datasets, you'll need to create a star schema optimized for queries on song play analysis. This includes the following tables.
 
-![image](https://user-images.githubusercontent.com/70199241/173021524-f640fc75-532f-4b47-a263-7d6a15c5a084.png)
+![image](https://user-images.githubusercontent.com/70199241/180388444-a5f5b617-493e-4634-9d13-1d80e093de9f.png)
 
 https://drawsql.app/hpe-1/diagrams/song-play-analysis
 

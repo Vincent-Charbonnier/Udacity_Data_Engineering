@@ -63,7 +63,7 @@ https://drawsql.app/hpe-1/diagrams/song-play-analysis
 ## ELT Design
 In this project, we extract the data from AWS S3, load it to Spark, process it and then save the results to S3.
 
-![image](https://user-images.githubusercontent.com/70199241/186891850-60e55cc6-7863-4c16-ab60-1e1205631ecc.png)
+![image](https://user-images.githubusercontent.com/70199241/186891942-be67853c-957e-4a36-b40f-528d46359b2c.png)
 
 ## Project Template
 In addition to the data files, the project repository includes 7 files:

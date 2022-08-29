@@ -12,9 +12,12 @@ import pandas as pd
 config = configparser.ConfigParser()
 config.read('dl.cfg')
 
-os.environ['AWS_ACCESS_KEY_ID']=config['AWS_ACCESS_KEY_ID']
-os.environ['AWS_SECRET_ACCESS_KEY']=config['AWS_SECRET_ACCESS_KEY']
+os.environ['AWS_ACCESS_KEY_ID']=config['AWS']['AWS_ACCESS_KEY_ID']
+os.environ['AWS_SECRET_ACCESS_KEY']=config['AWS']['AWS_SECRET_ACCESS_KEY']
 
+Bucket = "project4-data-lake-s3"
+BucketPath = "s3a://" + Bucket
+Parquet = BucketPath + "/parquet/"
 
 def create_spark_session():
     """
@@ -41,7 +44,8 @@ def process_song_data(spark, input_data, output_data):
     
     # get filepath to song data file
     SongBucketPath = BucketPath + "/song-data"
-    song_data = SongBucketPath + "/*/*/*/*.json"
+    #song_data = SongBucketPath + "/*/*/*/*.json"
+    song_data = input_data + 'song_data/*/*/*/*.json'
     
     # define required schema
     SongDataSchema = R([
@@ -90,8 +94,9 @@ def process_log_data(spark, input_data, output_data):
     
     # get filepath to log data file
     LogBucketPath = BucketPath + "/log-data"
-    log_data = LogBucketPath + "/*.json"
-
+    #log_data = LogBucketPath + "/*.json"
+    log_data = input_data + 'log_data/*.json'
+    
     # define required schema
     LogDataSchema = R([
         Fld("artist",Str()),
@@ -178,13 +183,11 @@ def main():
     
     spark = create_spark_session()
     
-    Bucket = "project4-data-lake-s3"
-    BucketPath = "s3a://" + Bucket
-    Parquet = BucketPath + "/parquet/"
-    
-    input_data = BucketPath
-    output_data = Parquet
-    
+    #input_data = BucketPath
+    #output_data = Parquet
+    input_data = "s3a://project4-data-lake-s3/"
+    output_data = "s3a://project4-data-lake-s3/parquet/"
+
     process_song_data(spark, input_data, output_data)    
     process_log_data(spark, input_data, output_data)
 

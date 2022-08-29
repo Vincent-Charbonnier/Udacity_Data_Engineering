@@ -4,7 +4,7 @@ import os
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import udf, col
 from pyspark.sql.functions import year, month, dayofmonth, hour, weekofyear, date_format
-import boto3
+#import boto3
 from pyspark.sql.types import StructType as R, StructField as Fld, DoubleType as Dbl, StringType as Str, IntegerType as Int, DateType as Date, FloatType as Flt, TimestampType
 import pyspark.sql.functions as F
 import pandas as pd

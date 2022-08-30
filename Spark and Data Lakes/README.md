@@ -60,7 +60,7 @@ https://drawsql.app/hpe-1/diagrams/song-play-analysis
 5. time - timestamps of records in songplays broken down into specific units
   - start_time, hour, day, week, month, year, weekday
 
-## ELT Design
+## ETL Design
 In this project, we extract the data from AWS S3, load it to Spark, process it and then save the results to S3.
 
 ![image](https://user-images.githubusercontent.com/70199241/186891942-be67853c-957e-4a36-b40f-528d46359b2c.png)

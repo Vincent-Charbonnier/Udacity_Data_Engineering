@@ -152,7 +152,6 @@ def process_log_data(spark, input_data, output_data):
                           .withColumn("month", F.month(col("start_time")))\
                           .withColumn("year", F.year(col("start_time")))\
                           .withColumn("weekday", F.dayofweek(col("start_time")))
-                          .dropDuplicates()
     time_table.createOrReplaceTempView('time')
     
     # write time table to parquet files partitioned by year and month

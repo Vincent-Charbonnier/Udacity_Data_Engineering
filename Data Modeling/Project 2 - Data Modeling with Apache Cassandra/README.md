@@ -1,4 +1,4 @@
-# Project 1 - Data Modeling with Cassandra
+# Project 2 - Data Modeling with Cassandra
 
 ## Introduction
 A startup called Sparkify wants to analyze the data they've been collecting on songs and user activity on their new music streaming app. 
